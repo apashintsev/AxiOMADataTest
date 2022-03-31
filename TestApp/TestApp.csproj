@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="PcNcCommClient">
+      <HintPath>C:\NCSystems\AxiOMA Control x64\PcNcCommClient.dll</HintPath>
+    </Reference>
+    <Reference Include="PcNcCommon">
+      <HintPath>C:\NCSystems\AxiOMA Control x64\PcNcCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
