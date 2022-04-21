@@ -1,9 +1,11 @@
-﻿using PcNcCommClient;
+﻿using Newtonsoft.Json;
+using PcNcCommClient;
 using PcNcCommon;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -177,6 +179,15 @@ namespace AxiOMADataTest
             thisItem.Disconnect();
             thisItem.StopAt = DateTime.UtcNow;
             var dis = thisItem.AxiomaData;
+
+            string myJson = JsonConvert.SerializeObject(thisItem.AxiomaData); 
+            using (var client = new HttpClient())
+            {
+                var response = client.PostAsync(
+                    "https://localhost:44376/api/My/AddData",
+                     new StringContent(myJson, Encoding.UTF8, "application/json")).GetAwaiter().GetResult();
+            }
+
         }
 
         internal void Process(string address, int minutes)

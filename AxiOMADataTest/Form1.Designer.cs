@@ -39,13 +39,12 @@ namespace AxiOMADataTest
             this.label4 = new System.Windows.Forms.Label();
             this.filePosTextBox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(16, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 0;
@@ -86,7 +85,7 @@ namespace AxiOMADataTest
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(47, 48);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(132, 22);
@@ -95,7 +94,7 @@ namespace AxiOMADataTest
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(47, 79);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(132, 22);
@@ -104,7 +103,7 @@ namespace AxiOMADataTest
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(47, 108);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(132, 22);
@@ -123,7 +122,7 @@ namespace AxiOMADataTest
             // filePosTextBox
             // 
             this.filePosTextBox.Location = new System.Drawing.Point(291, 43);
-            this.filePosTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filePosTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.filePosTextBox.Multiline = true;
             this.filePosTextBox.Name = "filePosTextBox";
             this.filePosTextBox.Size = new System.Drawing.Size(239, 131);
@@ -131,29 +130,21 @@ namespace AxiOMADataTest
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(256, 246);
+            this.button2.Location = new System.Drawing.Point(96, 238);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(730, 159);
             this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
+            this.button2.Text = "После нажатия на эту кнопку начнётся сбор данных с аксиомы. Когда он завершится, " +
+    "данные будут сброшены на бэкэнд. Сейчас жёстко забито, что после минуты сбора мы" +
+    " сбрасываем данные";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(284, 319);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 17);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "label5";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.filePosTextBox);
             this.Controls.Add(this.label4);
@@ -164,7 +155,7 @@ namespace AxiOMADataTest
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "AxiOMA Read Coords Test";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -185,7 +176,6 @@ namespace AxiOMADataTest
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.TextBox filePosTextBox;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
     }
 }
 

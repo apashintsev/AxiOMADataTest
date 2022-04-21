@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,19 +26,31 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<List<MongoAxiomaData>> GetAsync()
+        public async Task<ActionResult> GetAsync()
         {
-            return await _repository.GetAllResults();
+            return Ok(await _repository.GetAllResults());
         }
 
-        //в адрес надо писать пока localhost
-        public record Dto(int Minutes, string Address);
+        ////в адрес надо писать пока localhost
+        //public record Dto(int Minutes, string Address);
 
+        //[HttpPost]
+        //public async Task<OkResult> Start([FromBody] Dto dto)
+        //{
+        //    AxiomaDataExtractor axiomaDataExtractor = new(_repository);
+        //    axiomaDataExtractor.Process(dto.Address, dto.Minutes);
+        //    return Ok();
+        //}
+
+        /// <summary>
+        /// Поинт, который принимает данные
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         [HttpPost]
-        public async Task<OkResult> Start([FromBody] Dto dto)
+        public async Task<ActionResult> AddData([FromBody] List<AxiomaData> Data)
         {
-            AxiomaDataExtractor axiomaDataExtractor = new(_repository);
-            axiomaDataExtractor.Process(dto.Address, dto.Minutes);
+            await _repository.AddResult(new MongoAxiomaData() { Data = Data, DateTime = DateTime.UtcNow });
             return Ok();
         }
 
