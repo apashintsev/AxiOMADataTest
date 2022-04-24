@@ -31,7 +31,8 @@ namespace WebAPI.Repos
 
         public async Task<List<MongoAxiomaData>> GetAllResults()
         {
-            return await _data.Find(x => true).ToListAsync();
+            var r = await _data.Find(x => true).ToListAsync();
+            return r;
         }
     }
 }

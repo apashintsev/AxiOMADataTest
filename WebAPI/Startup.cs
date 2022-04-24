@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using MongoDB.Bson.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +44,7 @@ namespace WebAPI
 
 
             services.AddScoped<IRepository, Repository>();
-
+            BsonSerializer.RegisterSerializer(new BasicStructSerializer<Coords>());
         }
 
         private static void ConfigureSwagger(IServiceCollection services)
