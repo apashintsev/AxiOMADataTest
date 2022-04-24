@@ -27,10 +27,17 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> GetAsync()
+        public async Task<ActionResult> GetAllAsync()
         {
             var r = await _repository.GetAllResults();
             return Ok(r);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> GetLastAsync()
+        {
+            var r = await _repository.GetAllResults();
+            return Ok(r.Last());
         }
 
         ////в адрес надо писать пока localhost
