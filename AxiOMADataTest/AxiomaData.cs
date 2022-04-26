@@ -25,7 +25,7 @@ namespace AxiOMADataTest
             x = _x;
             y = _y;
             z = _z;
-            Date = DateTime.UtcNow;
+            Date = DateTime.Now;
         }
     }
 }
