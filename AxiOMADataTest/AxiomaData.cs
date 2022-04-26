@@ -5,9 +5,10 @@ namespace AxiOMADataTest
     public class AxiomaData
     {
         public string Filename { get; set; }
-        public int FilePosition { get; set; }
-        public int Level { get; set; }
-        public int SubprogVersion { get; set; }
+        public string Path { get; set; }
+       // public int FilePosition { get; set; }
+       // public int Level { get; set; }
+       // public int SubprogVersion { get; set; }
 
         public Coords Coords { get; set; }
     }

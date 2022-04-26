@@ -72,14 +72,16 @@ namespace AxiOMADataTest
             this.textBox2.Text = posY.ToString();
             this.client.GetAxisDrPosValue(2, out posZ);
             this.textBox3.Text = posZ.ToString();
-
+            
             this.client.GetFilePosition(1, out filename, out filepos, out level, out subprog_version);
+            var onlyname = filename.Split('/').Last();
             var data = new AxiomaData()
             {
-                Filename = filename,
-                Level = level,
-                FilePosition = filepos,
-                SubprogVersion = subprog_version,
+                Filename = onlyname,
+                //Level = level,
+                //FilePosition = filepos,
+                Path = string.IsNullOrWhiteSpace(onlyname)?"": filename.Replace(onlyname, string.Empty),
+                //SubprogVersion = subprog_version,
                 Coords = new Coords(posX, posY, posZ)
             };
 
