@@ -272,7 +272,7 @@ namespace AxiOMADataTest
             MongoClient client = new MongoClient(connectionString);
             IMongoDatabase database = client.GetDatabase("AxiomaBackend");
             var collection = database.GetCollection<MongoAxiomaData>("DataCollectionName");
-            var item =new MongoAxiomaData() { Data = Data, DateTime = DateTime.UtcNow };
+            var item =new MongoAxiomaData() { Data = Data, DateTime = DateTime.Now };
             collection.InsertOne(item);
 
             //string myJson = JsonConvert.SerializeObject(Data);
