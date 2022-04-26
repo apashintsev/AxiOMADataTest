@@ -1,11 +1,10 @@
-﻿using AxiOMADataTest;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace WebAPI.Models
+namespace AxiOMADataTest
 {
     public class MongoAxiomaData
     {

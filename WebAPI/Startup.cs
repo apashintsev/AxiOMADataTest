@@ -44,7 +44,6 @@ namespace WebAPI
 
 
             services.AddScoped<IRepository, Repository>();
-            BsonSerializer.RegisterSerializer(new BasicStructSerializer<Coords>());
         }
 
         private static void ConfigureSwagger(IServiceCollection services)

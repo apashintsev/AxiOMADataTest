@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using AxiOMADataTest;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -56,12 +57,12 @@ namespace WebAPI.Controllers
         /// </summary>
         /// <param name="dto"></param>
         /// <returns></returns>
-        [HttpPost]
-        public async Task<ActionResult> AddData([FromBody] List<AxiomaData> Data)
-        {
-            await _repository.AddResult(new MongoAxiomaData() { Data = Data, DateTime = DateTime.UtcNow });
-            return Ok();
-        }
+        //[HttpPost]
+        //public async Task<ActionResult> AddData([FromBody] List<AxiomaData> Data)
+        //{
+        //    await _repository.AddResult(new MongoAxiomaData() { Data = Data, DateTime = DateTime.UtcNow });
+        //    return Ok();
+        //}
 
     }
 }

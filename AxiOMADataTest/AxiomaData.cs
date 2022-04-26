@@ -12,9 +12,11 @@ namespace AxiOMADataTest
         public Coords Coords { get; set; }
     }
 
-    public struct Coords
+    public class Coords
     {
-        public double x, y, z;
+        public double x { get; set; }
+        public double y { get; set; }
+        public double z { get; set; }
         public DateTime Date;
 
         public Coords(double _x, double _y, double _z)

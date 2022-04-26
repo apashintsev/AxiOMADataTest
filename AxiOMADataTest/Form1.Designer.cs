@@ -38,7 +38,6 @@ namespace AxiOMADataTest
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.filePosTextBox = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -128,24 +127,11 @@ namespace AxiOMADataTest
             this.filePosTextBox.Size = new System.Drawing.Size(239, 131);
             this.filePosTextBox.TabIndex = 4;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(96, 238);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(730, 159);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "После нажатия на эту кнопку начнётся сбор данных с аксиомы. Когда он завершится, " +
-    "данные будут сброшены на бэкэнд. Сейчас жёстко забито, что после минуты сбора мы" +
-    " сбрасываем данные";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.filePosTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
@@ -175,7 +161,6 @@ namespace AxiOMADataTest
     private System.Windows.Forms.TextBox textBox3;
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.TextBox filePosTextBox;
-        private System.Windows.Forms.Button button2;
     }
 }
 
