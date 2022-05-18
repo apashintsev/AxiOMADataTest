@@ -20,12 +20,15 @@ namespace AxiOMADataTest
         public double z { get; set; }
         public DateTime Date;
 
+        public long UnixTimestamp { get; set; }
+
         public Coords(double _x, double _y, double _z)
         {
             x = _x;
             y = _y;
             z = _z;
             Date = DateTime.Now;
+            UnixTimestamp = ((DateTimeOffset)Date).ToUnixTimeSeconds(); 
         }
     }
 }
