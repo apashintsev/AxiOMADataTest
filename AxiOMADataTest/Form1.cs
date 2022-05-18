@@ -52,7 +52,7 @@ namespace AxiOMADataTest
                 this.isClientConnected = true;
 
                 timer = new System.Windows.Forms.Timer();
-                timer.Interval = 50;
+                timer.Interval = (int)udInterval.Value;// 50;
                 timer.Tick += Timer_Tick;
                 timer.Start();
             }
