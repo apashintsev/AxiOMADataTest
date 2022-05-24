@@ -14,6 +14,7 @@ using System.Threading;
 using Newtonsoft.Json;
 using System.Net.Http;
 using MongoDB.Driver;
+using System.IO;
 
 namespace AxiOMADataTest
 {
@@ -275,7 +276,14 @@ namespace AxiOMADataTest
             var item =new MongoAxiomaData() { Data = Data, DateTime = DateTime.Now };
             collection.InsertOne(item);
 
-            //string myJson = JsonConvert.SerializeObject(Data);
+
+            try
+            {        
+                File.WriteAllText($"OutputData-{DateTime.UtcNow}", JsonConvert.SerializeObject(Data));
+            }catch (Exception ex)
+            {
+
+            }
             //using (var client = new HttpClient())
             //{
             //    var response = client.PostAsync(
